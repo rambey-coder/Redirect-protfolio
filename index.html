@@ -55,6 +55,47 @@
             font-weight: 300;
         }
 
+        a {
+            outline: 0;
+            background: transparent;
+            border: 1px solid #916bbf;
+            border-radius: 5px;
+            color: #f6ccef;
+            margin-top: 10px;
+            min-width: 130px;
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        a:hover:after {
+            width: 100%;
+        }
+
+        a:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            transition: all 0.3s ease;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background-color: #3d2c8d;
+        }
+
+        a:active {
+            color: #1c0c5b;
+        }
+
         @media screen and (max-width:636px) {
             .container {
                 width: 80%;
@@ -72,6 +113,7 @@
         <h1>Thank You!</h1>
         <h6>We've Got your Message</h6>
         <p>We'll get back to you as soon as possible</p>
+        <a href="https://rambeybello.netlify.app/">Back</a>
     </div>
 </body>
 </html>
